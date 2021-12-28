@@ -13,3 +13,15 @@
     - `/widgets` - Small use-anywhere UI components
     - `/pages`- Complete pages
         - `/NftPlaylist` - A full page displaying a user's NFTs/tezos domains
+
+#### Milestone 2 (new)
+- `src`
+   - `pages`
+      - `NftBrowse` - New discovery page
+      - `NftWaitlist` - Page for the NFT invites & claiming. Source code for the collection of addreses is available [here](https://github.com/mailscript/nft-invite-backend)
+   -  `clients`
+      - `tezid.ts` - TezId integration
+   - 
+
+
+

@@ -46,9 +46,11 @@ export function HENGrid({
       limit: PAGE_SIZE,
     },
   });
+  //Parses params out of the URL. For example: /nft/:market/:id
   const {params} = useRouteMatch<{id: string}>();
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(0); //page number for pagination
 
+  //Counts tokens. Switch statement for handling created vs collected.
   const tokenCount = useMemo(
     () =>
       data
@@ -59,6 +61,7 @@ export function HENGrid({
     [colType, data]
   );
 
+  //Checks if there are more NFTs to show. If user has looked through all of nfts in a collection
   const hasMore = useMemo<boolean>(
     () =>
       data
@@ -70,7 +73,8 @@ export function HENGrid({
         : false,
     [colType, data, tokenCount]
   );
-
+  
+  //Array of all tokens. (title, description, creator, display_uri, etc)
   const tokens = useMemo(
     () =>
       data
